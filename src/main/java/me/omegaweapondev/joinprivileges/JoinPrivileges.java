@@ -30,6 +30,7 @@ public class JoinPrivileges extends JavaPlugin {
     configUpdater();
     setupChat();
     commandAndEventSetup();
+    SpigotUpdater();
   }
 
   @Override
@@ -121,7 +122,7 @@ public class JoinPrivileges extends JavaPlugin {
   }
 
   private void SpigotUpdater() {
-    new SpigotUpdater(this, 74788).getVersion(version -> {
+    new SpigotUpdater(this, 84563).getVersion(version -> {
       if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
         Utilities.logInfo(true, "You are already running the latest version");
       } else {

@@ -24,6 +24,8 @@ public class PlayerListener implements Listener {
     final Player player = playerJoinEvent.getPlayer();
     playerJoinEvent.setJoinMessage(null);
 
+    spigotUpdateNotify(player);
+
     if(!Utilities.checkPermissions(player, true, "joinprivileges.join.silent", "joinprivileges.admin")) {
       playerJoin(player);
     }
@@ -130,7 +132,7 @@ public class PlayerListener implements Listener {
       return;
     }
 
-    new SpigotUpdater(JoinPrivileges.getInstance(), 74788).getVersion(version -> {
+    new SpigotUpdater(JoinPrivileges.getInstance(), 84563).getVersion(version -> {
       if(JoinPrivileges.getInstance().getDescription().getVersion().equalsIgnoreCase(version)) {
         Utilities.logInfo(true, "You are already running the latest version");
         return;

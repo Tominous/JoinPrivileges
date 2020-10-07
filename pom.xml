@@ -18,7 +18,7 @@
   <groupId>me.omegaweapon</groupId>
   <artifactId>joinprivileges</artifactId>
   <name>JoinPrivileges</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <description>Control what happens when a player joins your server!</description>
 
   <!--
