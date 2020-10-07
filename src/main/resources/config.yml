@@ -1,0 +1,118 @@
+#-------------------------------------------------------------------------------------------
+#
+#  Welcome to the JoinPrivileges' Configuration file.
+#
+#  Here you'll find all the different settings that
+#  you're able to adjust to get everything exactly how you want.
+#
+#  Placeholders:
+#   - %player% -> Gets the players name without any name colour
+#   - %prefix% -> Grabs the players prefix from vault
+#   - %suffix% -> Grabs the players suffix from vault
+#   - %displayname% -> Gets the players name with their name colour
+#   - %playerCount% -> The amount of players currently online
+#   - %maxPlayers% -> The max amount of players to server can have online at once
+#
+#  This plugin does support the use of ALL PlaceholderAPI placeholders.
+#  All the messages are handled by the messages.yml.
+#
+#  You can find all the sounds here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+#  You can find all the particle effects here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+#
+#-------------------------------------------------------------------------------------------
+
+First_Join_Settings:
+  # Whether you want to control what happens when someone joins for the first time.
+  Enabled: true
+  # A special server wide announcement is made for the players first time joining.
+  Format: "&7&l[&3+&7&l] %displayname% &3has just joined the server for the first time!"
+  # Special commands that will be run via console when a player joins for the first time.
+  First_Join_Commands:
+    # Whether or not you want to execute commands for the player on their first join.
+    Enabled: true
+    # The commands that you want to execute. All commands will be run from the console.
+    # Please do not include the leading slash ("/").
+    Commands:
+      - give %player% diamond 1
+
+Join_Settings:
+  # Whether you want to control what happens whenever someone joins the server.
+  Enabled: true
+  # The default join message for when they don't have a special group join message.
+  Default_Format: "&7&l[&3+&7&l] %displayname% &3has just joined the server!"
+  # Special commands that will be executed when a player joins the server.
+  Join_Commands:
+    # Whether you want to use the special commands or not.
+    Enabled: true
+    # The commands that you want to execute. All commands will be run from console.
+    # Please do not include the leading slash ("/").
+    Commands:
+      - give %player% apple 1
+  Group_Join_Settings:
+    # Whether you want to execute special commands when a player from a specific group joins
+    Enabled: true
+    # The commands that you want to execute. All commands will be run from console.
+    # For Group Commands, make sure to add the permission `joinprivileges.join.groups.<group name>` to the group.
+    # To add more groups, simply copy the format for the example group below.
+    Groups:
+      owner:
+        # The format that will be used for players in this group.
+        Join_Message: "&7&l[&e+&7&l] %prefix% %displayname% &bhas joined, everyone behave!"
+        # The commands that you want to execute. All commands will be executed from the servers console.
+        # Please do not include the leading slash ("/") when entering in the commands.
+        Group_Commands:
+          # Whether this group will have special commands executed when they join.
+          Enabled: true
+          # The commands that you want to execute. All commands will be executed from the servers console.
+          # Please do not include the leading slash ("/") when entering in the commands.
+          Commands:
+            - give %player% emerald 1
+
+Quit_Settings:
+  # Whether you want to control what happens whenever someone quits the server.
+  Enabled: true
+  # Should a private message be sent to the player when they quits.
+  Default_Format: "&7&l[&3+&7&l] %displayname% &3has just quit the server!"
+  # Special commands that will be executed when a player quits the server.
+  Quit_Commands:
+    # Whether you want to use the special commands or not.
+    Enabled: true
+    # The commands that you want to execute. All commands will be run from console.
+    # Please do not include the leading slash ("/").
+    Commands:
+      - give %player% stick 1
+  Group_Quit_Commands:
+    # Whether you want to execute special commands when a player from a specific group quits
+    Enabled: true
+    # The commands that you want to execute. All commands will be run from console.
+    # For Group Commands, make sure to add the permission `joinprivileges.quit.groups.<group name>` to the group.
+    # To add more groups, simply copy the format for the example group below.
+    Groups:
+      owner:
+        # The format that will be used for players in this group.
+        Quit_Message: "&7&l[&e+&7&l] %prefix% %displayname% &bhas left, everyone party!"
+        Quit_Commands:
+          # Whether this group will have special commands executed when they quit.
+          Enabled: true
+          # The commands that you want to execute. All commands will be executed from the servers console.
+          # Please do not include the leading slash ("/") when entering in the commands.
+          Commands:
+            - give %player% emerald 1
+
+Join_Effects:
+  # Whether you want special join effects when a player logs in
+  Enabled: true
+  # A special sound that gets played to the player when they log in
+  Sound: ENTITY_CHICKEN_EGG
+  # A special particle effect that happens when the player logs in
+  Particle_Effect: EXPLOSION_LARGE
+  # The Particle Amount
+  # The Higher the amount, the more noticeable it is (30-50 is usually a good amount)
+  # Warning: Don't go overboard with the particle amount as it may cause lag it is too large
+  Particle_Amount: 30
+
+# If true, players with the permission `joinprivileges.update` will receive update notifications.
+Update_Notify: true
+
+# DO NOT EDIT THIS!
+Config_Version: 1.0

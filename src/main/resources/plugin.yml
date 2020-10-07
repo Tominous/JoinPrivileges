@@ -1,0 +1,49 @@
+name: ${project.name}
+version: ${project.version}
+api-version: ${pl.apiver}
+description: ${project.description}
+main: ${main.class}
+
+author: ${pl.author}
+
+softdepend:
+  - Vault
+  - PlaceholderAPI
+
+commands:
+  joinprivileges:
+    description: The general command for the plugin
+    aliases: [jp, joinp, jprivileges]
+  joinprivilegeslogs:
+    description: The Logs command
+    aliases: [jpl, joinlogs, jplogs]
+
+permissions:
+  joinprivileges.admin:
+    description: Grants the user all the permissions for the plugin
+    default: false
+    children:
+      - joinprivileges.debug
+      - joinprivileges.reload
+      - joinprivileges.update
+      - joinprivileges.join.silent
+      - joinprivileges.quit.silent
+      - joinprivileges.joineffects.bypass
+  joinprivileges.debug:
+    description: Grants the user access to use the debug command
+    default: false
+  joinprivileges.reload:
+    description: Grants the user access to use the reload command
+    default: false
+  joinprivileges.update:
+    description: Allows the user to recieve plugin update messages
+    default: false
+  joinprivileges.join.silent:
+    description: Allows the user to join the server without sending a join message.
+    default: false
+  joinprivileges.quit.silent:
+    description: Allows the user to quit the server without sending a quit message.
+    default: false
+  joinprivileges.joineffects.bypass:
+    description: Allows the user to bypass the join effects
+    default: false

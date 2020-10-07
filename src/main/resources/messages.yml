@@ -1,0 +1,23 @@
+#-------------------------------------------------------------------------------------------
+#
+#  Welcome to the JoinPrivileges' Messages file.
+#
+#  Customise all the different plugin messages
+#  so they can match with your server's theme
+#
+#-------------------------------------------------------------------------------------------
+
+# Set the plugin prefix that displays before all the plugin messages.
+Prefix: "&7&l[&3JP&7&l]"
+
+# Set the message that is received when the plugin reload command is used.
+Plugin_Reload: "&3All JoinPrivileges settings have been reloaded!"
+
+# Set the message players get when they try to target a player that does not exist.
+Invalid_Player: "&cSorry, that player does not exist"
+
+# Set the message players receive if they try using a JoinPrivileges command without permission
+No_Permission: "&cSorry, You do not have the correct privileges for that command."
+
+# DO NOT EDIT THIS!
+Config_Version: 1.0
