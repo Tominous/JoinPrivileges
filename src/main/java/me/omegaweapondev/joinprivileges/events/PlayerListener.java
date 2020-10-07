@@ -24,7 +24,9 @@ public class PlayerListener implements Listener {
     final Player player = playerJoinEvent.getPlayer();
     playerJoinEvent.setJoinMessage(null);
 
-    playerJoin(player);
+    if(!Utilities.checkPermissions(player, true, "joinprivileges.join.silent", "joinprivileges.admin")) {
+      playerJoin(player);
+    }
   }
 
   @EventHandler(priority = EventPriority.HIGHEST)
@@ -32,7 +34,9 @@ public class PlayerListener implements Listener {
     final Player player = playerQuitEvent.getPlayer();
     playerQuitEvent.setQuitMessage(null);
 
-    playerQuit(player);
+    if(!Utilities.checkPermissions(player, true, "joinprivileges.quit.silent", "joinprivileges.admin")) {
+      playerQuit(player);
+    }
   }
 
   private void playerJoin(final Player player) {

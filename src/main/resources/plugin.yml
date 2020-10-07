@@ -14,9 +14,6 @@ commands:
   joinprivileges:
     description: The general command for the plugin
     aliases: [jp, joinp, jprivileges]
-  joinprivilegeslogs:
-    description: The Logs command
-    aliases: [jpl, joinlogs, jplogs]
 
 permissions:
   joinprivileges.admin:
