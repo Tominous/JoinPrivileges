@@ -26,7 +26,7 @@ public class PlayerListener implements Listener {
 
     spigotUpdateNotify(player);
 
-    if(!Utilities.checkPermissions(player, true, "joinprivileges.join.silent", "joinprivileges.admin")) {
+    if(!Utilities.checkPermissions(player, false, "joinprivileges.join.silent", "joinprivileges.admin")) {
       playerJoin(player);
     }
   }
