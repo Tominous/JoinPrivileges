@@ -22,7 +22,8 @@ Below you can find all the different features that I've implemented into the plu
 
 ### Downloading:
 
-You can always find the latest version by visiting the spigot page. This plugin works on all Bukkit/Spigot/Paper servers from version 1.13 and above.
+You can always find the latest version by visiting the [Spigot](https://www.spigotmc.org/resources/omegavision.73013/)
+page or [McMarket](https://www.mc-market.org/resources/18522/) page. This plugin works on all Bukkit/Spigot/Paper servers from version 1.13 and above.
 
 ### Installing:
 
