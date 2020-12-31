@@ -142,7 +142,7 @@ public class PlayerListener implements Listener {
       Utilities.logWarning(true,
         "A new version of " + pdf.getName() + " is available!",
         "Current Version: " + pdf.getVersion() + " > New Version: " + version,
-        "Grab it here: https://spigotmc.org/resources/74788"
+        "Grab it here: https://github.com/OmegaWeaponDev/JoinPrivileges"
       );
     });
   }

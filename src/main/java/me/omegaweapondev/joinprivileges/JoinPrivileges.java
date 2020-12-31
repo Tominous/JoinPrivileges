@@ -130,7 +130,7 @@ public class JoinPrivileges extends JavaPlugin {
         Utilities.logWarning(true,
           "A new version of " + pdf.getName() + " is avaliable!",
           "Current Version: " + pdf.getVersion() + " > New Version: " + version,
-          "Grab it here: https://spigotmc.org/resources/74788"
+          "Grab it here: https://github.com/OmegaWeaponDev/JoinPrivileges"
         );
       }
     });
